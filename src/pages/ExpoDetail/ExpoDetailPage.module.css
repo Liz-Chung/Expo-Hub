@@ -1,0 +1,268 @@
+.pageContainer{
+  width: 100%;
+  max-width: 1360px;
+  min-height: calc(100vh - 227px);
+  margin: auto;
+  margin-top: 62px;
+  padding: 1rem;
+}
+
+.productContainer{
+  display: flex;
+  margin-top: 4rem;
+}
+
+.imgContainer,
+.productInfo,
+.bookingInfo {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.imgContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: var(--color-white);
+  height: 500px;
+  min-width: 310px;
+  border-radius: 10px;
+}
+
+.img{
+  align-items: start;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.productInfo{
+  display: flex;
+  padding: 3rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.itemName {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.itemLocation {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-gray-800);
+}
+
+.itemDate {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-gray-800);
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.bookingInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 3rem;
+  gap: 2rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 20px;
+}
+
+.dateQuantityContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 2rem;
+}
+
+.datePickerContainer {
+  text-align: start;
+}
+
+.dayPickerBackground {
+  background-color: var(--color-gray-100);
+  border-radius: 15px;
+  margin: 15px;
+  padding: 5px;
+}
+
+.bookingLabels {
+  font-weight: 600;
+}
+
+.quantityInput {
+  width: 60px;
+  padding: 0.5rem;
+  margin-left: 10px;
+  border: none;
+  background-color: var(--color-gray-100);
+  border-radius: 5px;
+  text-align: center;
+  color: rgb(87,13,248);
+  font-weight: 600;
+}
+
+.ratingContainer{
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 10px;
+}
+
+.errorMessage {
+  font-size: 14px;
+  font-weight: 500;
+  color: red;
+}
+
+.ButtonContainer{
+  display: flex;
+  gap: 15px;
+}
+
+.ButtonContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.segmentContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem;
+}
+
+.segmentButton {
+  flex: 1;
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-gray-500);
+  background-color: var(--color-white);
+  border: none;
+  border-bottom: 1px solid var(--color-gray-500);
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.segmentButton.active {
+  flex: 1;
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border: none;
+  border-bottom: 3px solid black;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.tabContent {
+  margin-top: 3rem;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.description {
+  font-size: 16px;
+  text-align: justify;
+}
+
+.fullWidthImg {
+  width: 100%;
+  height: auto;
+  margin-top: 10rem;
+}
+
+.titleAndFavorites {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.favoritesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.favoritesButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.favoriteIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.favoriteIcon.favorite {
+  content: url('/public/icons/favorite_clicked.png');
+}
+
+.favoriteIcon.notFavorite {
+  content: url('/public/icons/favorite.png');
+}
+
+.reviewItem {
+  border-bottom: 1px solid var(--color-gray-300);
+  padding: 1rem 0;
+}
+
+.reviewItem p {
+  color: var(--color-gray-800);
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 0.5rem;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 10px;
+}
+
+.userName {
+  margin-right: 1rem;
+}
+
+.commentText {
+  margin-Top: 10px;
+}
+
+@media screen and (max-width: 1024px){
+  .productContainer{
+    flex-direction: column;
+  }
+  .productInfo{
+    padding: 3rem 0;
+  }
+  .imgContainer{
+    margin: 1rem;
+  }
+  .productInfo{
+    margin:1rem;
+  }
+}

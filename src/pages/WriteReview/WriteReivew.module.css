@@ -1,0 +1,98 @@
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 227px);
+  height: 100vh;
+  padding: 1rem;
+}
+
+.formContainer {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.ratingContainer {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.ratingLabel {
+  font-weight: 500;
+  text-align: start;
+  font-size: 16px;
+  margin-right: 2rem;
+}
+
+.starRating {
+  width: 100%;
+}
+
+.nickContainer {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.nicknamelabel {
+  font-weight: 500;
+  text-align: start;
+  font-size: 16px;
+  margin-right: 2rem;
+}
+
+.nicknameArea {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  background-color: var(--color-white);
+  color: black;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  text-align: start;
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-align: start;
+  font-size: 16px;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
+.textArea {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: var(--color-white);
+  color: black;
+  border-radius: 4px;
+  margin-bottom: 3rem;
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.errorMessage {
+  color: red;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,103 @@
+.menu{
+  display: none;
+}
+
+.label{
+  width: 24px;
+  height: 24px;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.label:hover{
+  background-color: var(--color-gray-200);
+}
+
+.label:active{
+  background-color: var(--color-gray-200);
+}
+
+.sideNavContainer{
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0;
+  padding: 1.5rem;
+  text-align: start;
+  cursor: auto;
+  background-color: var(--color-white);
+  transition: width .3s;
+}
+
+.sideNavItems {
+  flex-grow: 1;
+}
+
+.sideNavItem{
+  width: 100%;
+  padding: 1.2rem;
+  cursor: pointer;
+  border-radius:10px;
+  transition: all .3s;
+}
+
+.sideNavItem:hover{
+  background-color: var(--color-gray-200);
+}
+
+.loginButtonContainer {
+  padding: 10px;
+}
+
+.loginButton {
+  display: flex;
+  align-items:start;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.loginIcon {
+  margin-right: 8px;
+  font-size: 22px;
+}
+
+.logoutMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 20px 40px;
+  border-radius: 10px;
+  z-index: 1001;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+@media screen and (max-width: 1024px){
+  .menu{
+    display: block;
+  }
+}
+  
+@media screen and (max-width: 488px){
+  .sideNavContainer{
+    width: 240px;
+  }
+}
+
+
+  

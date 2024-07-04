@@ -1,0 +1,164 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+figure{
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1,h2,p {
+  margin:0;
+  text-align: start;
+}
+
+li{
+  list-style: none;
+}
+
+label:hover{
+cursor: pointer;
+}
+
+button {
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  font-weight: 500;
+  color: var(--color-white);
+  transition: border-color 0.25s;
+  cursor:pointer;
+
+}
+
+.btn-main,
+.btn-move{
+  min-width: 38px;
+  font-size: 14px;
+  padding: 1.3rem;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgb(87,13,248);
+  border:none;
+  transition: background-color .2s;
+}
+
+.btn-main {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.btn-main2 {
+  padding: 5px 10px 5px;
+  background-color: rgb(77, 12, 219);
+}
+
+.btn-move {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.btn-main:hover{
+  background: rgb(77, 12, 219);
+}
+
+.btn-main:active{
+  background: rgb(69, 11, 194);
+}
+
+.btn-ghost{
+  min-width: 38px;
+  font-size: 14px;
+  padding: 1.3rem;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: default;
+  background: transparent;
+  color:black;
+}
+
+.btn-move{
+  background: transparent;
+  color:rgb(166,173,186);
+  border:1px solid rgb(166,173,186);
+}
+
+.btn-move:hover{
+  color: rgb(77, 12, 219);
+  border:1px solid rgb(77, 12, 219);
+}
+
+.btn-move:active{
+  color: rgb(69, 11, 194);
+  border:1px solid rgb(69, 11, 194);
+}
+
+a:hover{
+  color:inherit;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  color:var(--color-black);
+}
+
+.modal{
+  padding-right:0 !important;
+}
+
+.modal-open{
+  overflow:auto !important;
+  padding-right:0 !important;
+}
+
+.modal-backdrop{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content{
+  background-color: transparent;
+  border: none;
+}
+
+.scrollDisable{
+  max-height: 100vh!important;
+  overflow: hidden;
+}
+
+.truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 488px){
+  .truncate{
+    white-space: inherit;
+  }
+ }

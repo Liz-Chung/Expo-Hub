@@ -1,0 +1,33 @@
+.carouselContainer{
+  display: flex;
+  max-height: 700px;
+  margin-top: 64px;
+}
+
+.carouselContainer img{
+  object-fit: cover;
+}
+
+.desContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  height: calc(100% - 64px);
+  color:var(--color-white);
+}
+
+.des{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1360px;
+  min-width: 336px;
+  padding-left: 4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .carouselContainer {
+    height: 250px;
+  }
+}

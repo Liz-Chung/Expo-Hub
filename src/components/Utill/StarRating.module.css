@@ -1,0 +1,48 @@
+.starRating {
+  display: flex;
+}
+
+.star {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.star svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.starBase {
+  fill: #FEF3C7;
+}
+
+.starForeground {
+  fill: #FACC15;
+}
+
+.starFilled {
+  color: #FACC15;
+  font-size: 24px;
+}
+
+.starEmpty {
+  color: #FEF3C7;
+  font-size: 24px;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 10px;
+}
+
+.ratingContainer2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

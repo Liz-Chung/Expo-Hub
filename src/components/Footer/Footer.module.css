@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+  background-color: var(--color-gray-100);
+  color: var(--color-black);
+}
+
+.githubButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.githubButton svg {
+  fill: #000;
+  transition: fill 0.3s;
+}
+
+.githubButton:hover svg {
+  fill: #555;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color: var(--color-black);
+  margin-top: 0.5rem;
+}
