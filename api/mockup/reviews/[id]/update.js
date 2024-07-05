@@ -1,5 +1,5 @@
-import { reviews } from '../../data';
-import cors, { runMiddleware } from '../../corsMiddleware';
+import { reviews } from '../../../data';
+import cors, { runMiddleware } from '../../../corsMiddleware';
 
 export default async function handler(req, res) {
   await runMiddleware(req, res, cors);
