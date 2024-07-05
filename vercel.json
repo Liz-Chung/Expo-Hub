@@ -5,7 +5,7 @@
       "destination": "/index.html"
     },
     {
-      "source": "/api/(.*)",
+      "source": "/api/mockup/(.*)",
       "destination": "/api/$1"
     }
   ]
