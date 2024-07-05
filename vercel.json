@@ -6,7 +6,7 @@
     },
     {
       "source": "/api/mockup/(.*)",
-      "destination": "/api/mockup/(.*)"
+      "destination": "/api/mockup/data.js"
     }
   ]
 }
