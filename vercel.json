@@ -1,13 +1,8 @@
 {
-  "rewrites": [
+  "rewrites": 
     {
       "source": "/(.*)",
       "destination": "/index.html"
-    },
-    {
-      "source": "/api/mockup/(.*)",
-      "destination": "/api/mockup/data.js"
     }
-  ]
 }
 
