@@ -32,7 +32,7 @@ export const categories = selector({
   get: async () => {
     try {
       const timestamp = new Date().getTime();
-      const response = await fetch('/mockup/categories');
+      const response = await fetch(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/categories`);
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -46,7 +46,7 @@ export const themes = selector({
   get: async () => {
     try {
       const timestamp = new Date().getTime();
-      const response = await fetch('/mockup/themes');
+      const response = await fetch(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/themes`);
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -60,7 +60,7 @@ export const audienceTypes = selector({
   get: async () => {
     try {
       const timestamp = new Date().getTime();
-      const response = await fetch('/mockup/audience_types');
+      const response = await fetch(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/audience_types`);
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -74,7 +74,7 @@ export const locationTypes = selector({
   get: async () => {
     try {
       const timestamp = new Date().getTime();
-      const response = await fetch('/mockup/location_types');
+      const response = await fetch(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/location_types`);
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -88,7 +88,7 @@ export const expoList = selector<Exhibitions[]>({
   get: async () => {
     try {
       const timestamp = new Date().getTime();
-      const response = await fetch('/mockup/exhibitions');
+      const response = await fetch(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/exhibitions`);
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -102,7 +102,7 @@ export const userList = selector<Users[]>({
   get: async () => {
     try {
       const timestamp = new Date().getTime();
-      const response = await fetch('/mockup/users');
+      const response = await fetch(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/users`);
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -116,7 +116,7 @@ export const reviewList = selector<NormalizedReviews[]>({
   get: async () => {
     try {
       const timestamp = new Date().getTime();
-      const fakeApiResponse = await fetch('/mockup/reviews');
+      const fakeApiResponse = await fetch(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/reviews`);
       const fakeApiReviews: Reviews[] = await fakeApiResponse.json();
 
       const normalizedFakeApiReviews: NormalizedReviews[] = fakeApiReviews.map((review) => ({

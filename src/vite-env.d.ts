@@ -15,6 +15,10 @@ declare module '*.svg' {
 }
 
 interface ImportMetaEnv {
+  readonly VITE_MOCKUP_EXPO_API: string;
+}
+
+interface ImportMetaEnv {
   readonly VITE_BACKEND_API: string;
 }
 
