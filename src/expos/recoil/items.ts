@@ -31,6 +31,7 @@ export const categories = selector({
   key: 'categories',
   get: async () => {
     try {
+      const timestamp = new Date().getTime();
       const response = await fetch('/mockup/categories');
       return (await response.json()) || [];
     } catch (error) {
@@ -44,6 +45,7 @@ export const themes = selector({
   key: 'themes',
   get: async () => {
     try {
+      const timestamp = new Date().getTime();
       const response = await fetch('/mockup/themes');
       return (await response.json()) || [];
     } catch (error) {
@@ -57,6 +59,7 @@ export const audienceTypes = selector({
   key: 'audienceTypes',
   get: async () => {
     try {
+      const timestamp = new Date().getTime();
       const response = await fetch('/mockup/audience_types');
       return (await response.json()) || [];
     } catch (error) {
@@ -70,6 +73,7 @@ export const locationTypes = selector({
   key: 'locationTypes',
   get: async () => {
     try {
+      const timestamp = new Date().getTime();
       const response = await fetch('/mockup/location_types');
       return (await response.json()) || [];
     } catch (error) {
@@ -83,6 +87,7 @@ export const expoList = selector<Exhibitions[]>({
   key: 'expoList',
   get: async () => {
     try {
+      const timestamp = new Date().getTime();
       const response = await fetch('/mockup/exhibitions');
       return (await response.json()) || [];
     } catch (error) {
@@ -96,6 +101,7 @@ export const userList = selector<Users[]>({
   key: 'userList',
   get: async () => {
     try {
+      const timestamp = new Date().getTime();
       const response = await fetch('/mockup/users');
       return (await response.json()) || [];
     } catch (error) {
@@ -109,6 +115,7 @@ export const reviewList = selector<NormalizedReviews[]>({
   key: 'reviewList',
   get: async () => {
     try {
+      const timestamp = new Date().getTime();
       const fakeApiResponse = await fetch('/mockup/reviews');
       const fakeApiReviews: Reviews[] = await fakeApiResponse.json();
 
@@ -145,6 +152,7 @@ export const reviewList = selector<NormalizedReviews[]>({
 export const averageRatingData = selector({
   key: 'averageRatingData',
   get: ({ get }) => {
+    const timestamp = new Date().getTime();
     const reviews = get(reviewList);
     
     const ratingData = reviews.reduce((acc, review) => {
@@ -170,6 +178,7 @@ export const averageRatingData = selector({
 export const individualRatingData = selector({
   key: 'individualRatingData',
   get: ({ get }) => {
+    const timestamp = new Date().getTime();
     const reviews = get(reviewList);
 
     return reviews.reduce((acc, review) => {
