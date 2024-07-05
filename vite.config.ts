@@ -27,7 +27,7 @@ export default defineConfig(({ command, mode }) => {
           ws: true,
         },
         "/kakaoLogin": {
-          target: "https://kakao-login-api.vercel.app",
+          target: env.VITE_BACKEND_API,
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/kakaoLogin/, "/api/kakaoLogin"),
         },
