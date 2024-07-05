@@ -31,7 +31,7 @@ export const categories = selector({
   key: 'categories',
   get: async () => {
     try {
-      const response = await fetch('/api/categories');
+      const response = await fetch('/mockup/categories');
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -44,7 +44,7 @@ export const themes = selector({
   key: 'themes',
   get: async () => {
     try {
-      const response = await fetch('/api/themes');
+      const response = await fetch('/mockup/themes');
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -57,7 +57,7 @@ export const audienceTypes = selector({
   key: 'audienceTypes',
   get: async () => {
     try {
-      const response = await fetch('/api/audience_types');
+      const response = await fetch('/mockup/audience_types');
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -70,7 +70,7 @@ export const locationTypes = selector({
   key: 'locationTypes',
   get: async () => {
     try {
-      const response = await fetch('/api/location_types');
+      const response = await fetch('/mockup/location_types');
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -83,7 +83,7 @@ export const expoList = selector<Exhibitions[]>({
   key: 'expoList',
   get: async () => {
     try {
-      const response = await fetch('/api/exhibitions');
+      const response = await fetch('/mockup/exhibitions');
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -96,7 +96,7 @@ export const userList = selector<Users[]>({
   key: 'userList',
   get: async () => {
     try {
-      const response = await fetch('/api/users');
+      const response = await fetch('/mockup/users');
       return (await response.json()) || [];
     } catch (error) {
       console.log(`Error: \n${error}`);
@@ -109,7 +109,7 @@ export const reviewList = selector<NormalizedReviews[]>({
   key: 'reviewList',
   get: async () => {
     try {
-      const fakeApiResponse = await fetch('/api/reviews');
+      const fakeApiResponse = await fetch('/mockup/reviews');
       const fakeApiReviews: Reviews[] = await fakeApiResponse.json();
 
       const normalizedFakeApiReviews: NormalizedReviews[] = fakeApiReviews.map((review) => ({

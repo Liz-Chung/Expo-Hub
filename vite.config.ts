@@ -20,9 +20,9 @@ export default defineConfig(({ command, mode }) => {
     server: {
       proxy: {
         "/api": {
-          target: env.VITE_FAKE_EXPO_API,
+          target: env.VITE_MOCKUP_EXPO_API,
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, "/api"),
+          rewrite: (path) => path.replace(/^\/mockup/, "/mockup"),
           secure: false,
           ws: true,
         },
