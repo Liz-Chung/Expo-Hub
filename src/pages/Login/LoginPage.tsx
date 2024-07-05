@@ -5,7 +5,7 @@ import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'fire
 import styles from './LoginPage.module.css';
 
 const LoginPage = () => {
-  const REST_API_KEY = 'f26283eea89767af77ccc731e71554d8';
+  const REST_API_KEY = 'e1a40f06e94a1042ec86ee834e50b8a6';
   const REDIRECT_URI = 'https://expo-hub.vercel.app/kakaologin';
   const link = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
 
