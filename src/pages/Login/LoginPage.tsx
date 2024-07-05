@@ -6,7 +6,7 @@ import styles from './LoginPage.module.css';
 
 const LoginPage = () => {
   const REST_API_KEY = 'f26283eea89767af77ccc731e71554d8';
-  const REDIRECT_URI = 'http://localhost:5173/kakaologin';
+  const REDIRECT_URI = 'https://expo-hub.vercel.app/kakaologin';
   const link = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
 
   const [email, setEmail] = useState('');
