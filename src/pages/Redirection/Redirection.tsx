@@ -10,7 +10,7 @@ const Redirection = () => {
     const code = new URL(window.location.href).searchParams.get('code');
 
     if (code) {
-      axios.post('https://expo-hub.vercel.app/kakaoLogin', { code })
+      axios.post('https://expo-hub.vercel.app/kakaologin', { code })
         .then(response => {
           localStorage.setItem('token', response.data.token);
           navigate('/loginSuccess');
