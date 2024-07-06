@@ -43,7 +43,7 @@ export default function ExpoDetailPage(props: CartProps): React.ReactElement {
 
     const getItemInfo = async () => {
       try {
-        const response = await axios.get(`/api/exhibitions/${exhibition_id}`);
+        const response = await axios.get(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/exhibitions/${exhibition_id}`);
         if (isMounted) {
           setItemInfo(response.data);
         }
