@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import styles from './Redirection.module.css'
+import styles from './Redirection.module.css';
 
 const Redirection = () => {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ const Redirection = () => {
     const code = new URL(window.location.href).searchParams.get('code');
 
     if (code) {
-      axios.post('https://expo-hub.vercel.app/kakaologin', { code })
+      axios.post('https://kakao-login-api.vercel.app/kakaoLogin', { code })
         .then(response => {
           localStorage.setItem('token', response.data.token);
           navigate('/loginSuccess');
