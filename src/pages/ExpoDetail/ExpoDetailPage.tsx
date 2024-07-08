@@ -2,15 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useRecoilValue } from 'recoil';
-import { Exhibitions, userList, Users, NormalizedReviews } from '../../expos/recoil/items';
+import { Exhibitions, userList, reviewList, Users, NormalizedReviews } from '../../expos/recoil/items';
 import { DayPicker } from 'react-day-picker';
 import LoginModal from '../../modals/loginModal';
 import { AverageStarRating, IndividualStarRating } from '../../components/Utill/StarRating';
 import 'react-day-picker/dist/style.css';
 import './CustomDaypicker.css';
 import styles from './ExpoDetailPage.module.css';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../config/firebaseConfig';
 
 interface CartProps {
   cart: Exhibitions[];
@@ -81,32 +79,8 @@ export default function ExpoDetailPage(props: CartProps): React.ReactElement {
     if (activeTab === 'reviews') {
       const fetchReviews = async () => {
         try {
-          const apiResponse = await axios.get(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/reviews`);
-          const apiReviews = apiResponse.data.filter((review: NormalizedReviews) => review.exhibition_id === parseInt(exhibition_id!));
-
-          const querySnapshot = await getDocs(collection(db, 'reviews'));
-          const firebaseReviews = querySnapshot.docs.map((doc) => {
-            const data = doc.data();
-            return {
-              review_id: doc.id,
-              user_id: data.user_id,
-              user_name: data.user_name,
-              exhibition_id: data.exhibition_id,
-              rating: data.rating,
-              comment: data.comment,
-              created_at: data.timestamp.toDate().toISOString(),
-              updated_at: data.timestamp.toDate().toISOString(),
-            };
-          });
-
-          const combinedReviews = [...apiReviews, ...firebaseReviews].reduce((acc, review) => {
-            if (!acc.find((r) => r.review_id === review.review_id)) {
-              acc.push(review);
-            }
-            return acc;
-          }, []);
-
-          setReviews(combinedReviews);
+          const response = await axios.get(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/reviews`);
+          setReviews(response.data.filter((review: NormalizedReviews) => review.exhibition_id === parseInt(exhibition_id!)));
         } catch (error) {
           console.error('Error fetching reviews:', error);
         }
