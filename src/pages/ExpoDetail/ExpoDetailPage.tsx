@@ -9,6 +9,8 @@ import { AverageStarRating, IndividualStarRating } from '../../components/Utill/
 import 'react-day-picker/dist/style.css';
 import './CustomDaypicker.css';
 import styles from './ExpoDetailPage.module.css';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../config/firebaseConfig';
 
 interface CartProps {
   cart: Exhibitions[];
@@ -80,7 +82,24 @@ export default function ExpoDetailPage(props: CartProps): React.ReactElement {
       const fetchReviews = async () => {
         try {
           const response = await axios.get(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/reviews`);
-          setReviews(response.data.filter((review: NormalizedReviews) => review.exhibition_id === parseInt(exhibition_id!)));
+          const apiReviews = response.data.filter((review: NormalizedReviews) => review.exhibition_id === parseInt(exhibition_id!));
+          
+          const querySnapshot = await getDocs(collection(db, 'reviews'));
+          const firebaseReviews = querySnapshot.docs.map((doc) => {
+            const data = doc.data();
+            return {
+              review_id: doc.id,
+              user_id: data.user_id,
+              user_name: data.user_name,
+              exhibition_id: data.exhibition_id,
+              rating: data.rating,
+              comment: data.comment,
+              created_at: data.timestamp.toDate().toISOString(),
+              updated_at: data.timestamp.toDate().toISOString(),
+            };
+          });
+
+          setReviews([...apiReviews, ...firebaseReviews]);
         } catch (error) {
           console.error('Error fetching reviews:', error);
         }
