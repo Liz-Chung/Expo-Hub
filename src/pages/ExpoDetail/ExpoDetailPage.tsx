@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useRecoilValue } from 'recoil';
-import { Exhibitions, userList, reviewList, Users, NormalizedReviews } from '../../expos/recoil/items';
+import { Exhibitions, userList, Users, NormalizedReviews } from '../../expos/recoil/items';
 import { DayPicker } from 'react-day-picker';
 import LoginModal from '../../modals/loginModal';
 import { AverageStarRating, IndividualStarRating } from '../../components/Utill/StarRating';
@@ -81,9 +81,9 @@ export default function ExpoDetailPage(props: CartProps): React.ReactElement {
     if (activeTab === 'reviews') {
       const fetchReviews = async () => {
         try {
-          const response = await axios.get(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/reviews`);
-          const apiReviews = response.data.filter((review: NormalizedReviews) => review.exhibition_id === parseInt(exhibition_id!));
-          
+          const apiResponse = await axios.get(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/reviews`);
+          const apiReviews = apiResponse.data.filter((review: NormalizedReviews) => review.exhibition_id === parseInt(exhibition_id!));
+
           const querySnapshot = await getDocs(collection(db, 'reviews'));
           const firebaseReviews = querySnapshot.docs.map((doc) => {
             const data = doc.data();
@@ -99,7 +99,14 @@ export default function ExpoDetailPage(props: CartProps): React.ReactElement {
             };
           });
 
-          setReviews([...apiReviews, ...firebaseReviews]);
+          const combinedReviews = [...apiReviews, ...firebaseReviews].reduce((acc, review) => {
+            if (!acc.find((r) => r.review_id === review.review_id)) {
+              acc.push(review);
+            }
+            return acc;
+          }, []);
+
+          setReviews(combinedReviews);
         } catch (error) {
           console.error('Error fetching reviews:', error);
         }
