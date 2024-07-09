@@ -458,7 +458,7 @@
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 415px) {
   .pageContainer{
     min-width: 376px;
   }
