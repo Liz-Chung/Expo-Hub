@@ -38,3 +38,63 @@
 .modalButton:hover {
   background-color: rgb(69, 11, 194);
 }
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 340px;
+  }
+
+  .modal {
+    font-size: 16px;
+  }
+  
+  .modalButton {
+    padding: 10px 45px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .modal {
+    width: 320px;
+  }
+
+  .modal {
+    font-size: 15px;
+  }
+  
+  .modalButton {
+    padding: 10px 40px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .modal {
+    width: 300px;
+  }
+
+  .modal {
+    font-size: 14px;
+  }
+  
+  .modalButton {
+    padding: 10px 36px;
+    border-radius: 18px;
+  }
+}
+
+@media screen and (max-width: 360px) {  
+  .modal {
+    width: 280px;
+  }
+
+  .modal {
+    font-size: 13px;
+  }
+  
+  .modalButton {
+    padding: 10px 30px;
+    border-radius: 15px;
+  }
+}

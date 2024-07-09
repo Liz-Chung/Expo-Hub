@@ -72,11 +72,10 @@ export default function SideNav(): React.ReactElement {
                 </li>
               );
             })}
-          </ul>
           {auth ? (
             <div className={styles.loginButtonContainer} onClick={openModal}>
               <div className={styles.loginButton}>
-                <span className={`material-symbols-outlined ${styles.loginIcon}`}>
+                <span>
                   logout
                 </span>
                 <span className="text-bold-16">Logout</span>
@@ -92,6 +91,7 @@ export default function SideNav(): React.ReactElement {
               </div>
             </div>
           )}
+          </ul>
         </div>
       </SearchModal>
       <LogoutModal

@@ -34,3 +34,27 @@
   color: var(--color-black);
   margin-top: 0.5rem;
 }
+
+@media screen and (max-width: 768px) {
+  .copyright {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .copyright {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .copyright {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .copyright {
+    font-size: 1rem;
+  }
+}

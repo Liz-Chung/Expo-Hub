@@ -57,7 +57,6 @@ button {
   min-width: 38px;
   font-size: 14px;
   padding: 1.3rem;
-  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   background: rgb(87,13,248);
@@ -92,7 +91,6 @@ button {
   min-width: 38px;
   font-size: 14px;
   padding: 1.3rem;
-  font-size: 14px;
   font-weight: 600;
   cursor: default;
   background: transparent;

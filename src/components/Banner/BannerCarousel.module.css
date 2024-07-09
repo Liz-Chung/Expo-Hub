@@ -31,3 +31,27 @@
     height: 250px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .carouselContainer {
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .carouselContainer {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .carouselContainer {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .carouselContainer {
+    height: 150px;
+  }
+}

@@ -55,15 +55,70 @@
   }
 }
 
-@media screen and (max-width: 488px) {
+@media screen and (max-width: 768px) {
   .inputText {
-    width: 62px;
-    padding-left: 14px;
+    width: 110px;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 14px;
   }
 
   .inputText:focus {
-    width: 202px;
-    padding-left: 14px;
+    width: 250px;
+    padding-left: 10px;
     transition: width 0.3s;
+  }
+
+  .searchList {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .inputText {
+    width: 100px;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+
+  .inputText:focus {
+    width: 240px;
+    padding-left: 10px;
+    transition: width 0.3s;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .inputText {
+    width: 90px;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+
+  .inputText:focus {
+    width: 230px;
+    padding-left: 5px;
+    transition: width 0.3s;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .inputText {
+    width: 90px;
+    height: 40px;
+    padding-left: none;
+    font-size: 12px;
+  }
+
+  .inputText:focus {
+    width: 200px;
+    padding-left: 5px;
+    transition: width 0.3s;
+  }
+
+  .searchList {
+    font-size: 12px;
   }
 }

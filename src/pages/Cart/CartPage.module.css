@@ -19,6 +19,8 @@
   justify-content: flex-end;
   align-items: center;
   gap: 1.5rem;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .productContainer{
@@ -56,6 +58,55 @@
   padding: 3rem;
 }
 
+.expoName{
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.price{
+  font-size: 18px;
+}
+
+.visitDate{
+  font-size: 18px;
+}
+
+.btnGhost{
+  min-width: 38px;
+  font-size: 14px;
+  padding: 1.3rem;
+  font-weight: 600;
+  cursor: default;
+  background: transparent;
+  color:black;
+}
+
+.btnMain2 {
+  padding: 5px 10px 5px;
+  background-color: rgb(77, 12, 219);
+}
+
+.btnMain {
+  min-width: 38px;
+  font-size: 14px;
+  padding: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgb(87,13,248);
+  border:none;
+  transition: background-color .2s;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.btnMain:hover{
+  background: rgb(77, 12, 219);
+}
+
+.btnMain:active{
+  background: rgb(69, 11, 194);
+}
+
 @media screen and (max-width: 1024px){
   .productBox{
     flex-direction: row;
@@ -72,8 +123,192 @@
   }
 }
 
-@media screen and (max-width: 488px){
+@media screen and (max-width: 768px) {
+  .pageContainer{
+    margin: 35px auto 0;
+  }
+
+  .productBox{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cartContainer{
+    padding: 0.5rem;
+    margin: none;
+  }
+
+  .productContainer{
+    margin-bottom: 1.3rem;
+  }
+
+  .imgContainer{
+    width: 420px;
+    height: 420px;
+    margin: none;
+  }
+  
+  .img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .expoName{
+    font-size: 20px;
+  }
+  
+  .price{
+    font-size: 18px;
+  }
+
+  .visitDate{
+    font-size: 18px;
+  }
+
+  .btnGhost{
+    font-size: 16px;
+    padding: 1.2rem;
+  }
+
+  .btnMain2 {
+    padding: 5px 14px 5px;
+  }
+
   .priceBox{
-    justify-content: flex-start;
+    font-size: 20px;
+    flex-direction: column;
+  }
+
+  .btnMain {
+    font-size: 18px;
+    padding: 1.2rem;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .cartContainer{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .pageContainer{
+    margin: 30px auto 0;
+  }
+
+  .cartContainer{
+    padding: 0.4rem;
+  }
+
+  .productContainer{
+    margin-bottom: 1.2rem;
+  }
+
+  .imgContainer{
+    width: 360px;
+    height: 360px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .pageContainer{
+    margin: 25px auto 0;
+  }
+
+  .cartContainer{
+    padding: 0.3rem;
+  }
+
+  .productContainer{
+    margin-bottom: 1.1rem;
+  }
+
+  .imgContainer{
+    width: 350px;
+    height: 350px;
+  }
+
+  .expoName{
+    font-size: 18px;
+  }
+  
+  .price{
+    font-size: 16px;
+  }
+
+  .visitDate{
+    font-size: 16px;
+  }
+
+  .btnGhost{
+    font-size: 14px;
+    padding: 1.1rem;
+  }
+
+  .btnMain2 {
+    padding: 4px 12px 4px;
+  }
+
+  .priceBox{
+    font-size: 18px;
+  }
+
+  .btnMain {
+    font-size: 16px;
+    padding: 1.1rem;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .pageContainer{
+    margin: 20px auto 0;
+  }
+
+  .cartContainer{
+    padding: 0.2rem;
+  }
+
+  .productContainer{
+    margin-bottom: 1rem;
+  }
+
+  .imgContainer{
+    width: 200px;
+    height: 200px;
+  }
+
+  .expoName{
+    font-size: 16px;
+  }
+  
+  .price{
+    font-size: 14px;
+  }
+
+  .visitDate{
+    font-size: 14px;
+  }
+
+  .btnGhost{
+    font-size: 12px;
+    padding: 1rem;
+  }
+
+  .btnMain2 {
+    padding: 2px 10px 2px;
+  }
+
+  .priceBox{
+    font-size: 16px;
+  }
+
+  .btnMain {
+    font-size: 14px;
+    padding: 1rem;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }

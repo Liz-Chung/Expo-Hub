@@ -11,3 +11,99 @@
 
   margin: 1em;
 }
+
+@media screen and (max-width: 768px) {
+  .rdp {
+    --rdp-cell-size: 40px;
+    --rdp-caption-font-size: 14px;
+  }
+
+  .rdp-caption {
+    padding: 0 0.5em;
+  }
+
+  .rdp-nav_button {
+    width: 25px;
+    height: 25px;
+  }
+
+  .rdp-table {
+    max-width: 100%;
+  }
+
+  .rdp-caption_label {
+    font-size: var(--rdp-caption-font-size);
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .rdp {
+    --rdp-cell-size: 33px;
+    --rdp-caption-font-size: 14px;
+  }
+
+  .rdp-caption {
+    padding: 0 0.5em;
+  }
+
+  .rdp-nav_button {
+    width: 25px;
+    height: 25px;
+  }
+
+  .rdp-table {
+    max-width: 100%;
+  }
+
+  .rdp-caption_label {
+    font-size: var(--rdp-caption-font-size);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .rdp {
+    --rdp-cell-size: 30px;
+    --rdp-caption-font-size: 14px;
+  }
+
+  .rdp-caption {
+    padding: 0 0.5em;
+  }
+
+  .rdp-nav_button {
+    width: 25px;
+    height: 25px;
+  }
+
+  .rdp-table {
+    max-width: 100%;
+  }
+
+  .rdp-caption_label {
+    font-size: var(--rdp-caption-font-size);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .rdp {
+    --rdp-cell-size: 30px;
+    --rdp-caption-font-size: 14px;
+  }
+
+  .rdp-caption {
+    padding: 0 0.5em;
+  }
+
+  .rdp-nav_button {
+    width: 25px;
+    height: 25px;
+  }
+
+  .rdp-table {
+    max-width: 100%;
+  }
+
+  .rdp-caption_label {
+    font-size: var(--rdp-caption-font-size);
+  }
+}

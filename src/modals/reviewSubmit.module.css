@@ -50,3 +50,80 @@
 .btn-main:active {
   background-color: rgb(69, 11, 194);
 }
+
+@media screen and (max-width: 768px) {
+  .modalContent {
+    width: 340px;
+  }
+
+  .modalContent h2 {
+    font-size: 18px
+  }
+  
+  .modalContent p {
+    font-size: 16px;
+  }
+  
+  .btn-main {
+    padding: 10px 45px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .modalContent {
+    width: 320px;
+  }
+
+  .modalContent h2 {
+    font-size: 17px
+  }
+  
+  .modalContent p {
+    font-size: 15px;
+  }
+  
+  .btn-main {
+    padding: 10px 40px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .modalContent {
+    width: 300px;
+  }
+
+  .modalContent h2 {
+    font-size: 16px
+  }
+  
+  .modalContent p {
+    font-size: 14px;
+  }
+  
+  .btn-main {
+    padding: 10px 36px;
+    border-radius: 18px;
+  }
+}
+
+@media screen and (max-width: 360px) {  
+  .modalContent {
+    width: 280px;
+  }
+
+  .modalContent h2 {
+    font-size: 15px
+  }
+  
+  .modalContent p {
+    font-size: 13px;
+  }
+  
+  .btn-main {
+    padding: 10px 30px;
+    border-radius: 15px;
+  }
+}
+

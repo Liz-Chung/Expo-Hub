@@ -1,6 +1,7 @@
 .pageContainer{
   width: 100%;
   max-width: 1360px;
+  min-width: 1120px;
   min-height: calc(100vh - 227px);
   margin: auto;
   margin-top: 62px;
@@ -44,19 +45,19 @@
 }
 
 .itemName {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--color-primary-dark);
 }
 
 .itemLocation {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color-gray-800);
 }
 
 .itemDate {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color-gray-800);
 }
@@ -83,14 +84,10 @@
 .dateQuantityContainer {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
   gap: 2rem;
-}
-
-.datePickerContainer {
-  text-align: start;
 }
 
 .dayPickerBackground {
@@ -252,17 +249,523 @@
   margin-top: 10px;
 }
 
+.btnMain {
+  min-width: 38px;
+  font-size: 14px;
+  padding: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgb(87,13,248);
+  border:none;
+  transition: background-color .2s;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.btnMain:hover{
+  background: rgb(77, 12, 219);
+}
+
+.btnMain:active{
+  background: rgb(69, 11, 194);
+}
+
 @media screen and (max-width: 1024px){
+  .pageContainer{
+    min-width: 769px;
+  }
+
   .productContainer{
     flex-direction: column;
   }
-  .productInfo{
-    padding: 3rem 0;
+
+  .pageContainer{
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
   }
+  
   .imgContainer{
+    align-items: center;
+    justify-content: center;
     margin: 1rem;
+    height: 300px;
+    width: auto;
+    border-radius: 10px;
   }
+  
+  .img{
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+  }
+
   .productInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
     margin:1rem;
+  }
+
+  
+  .itemName {
+    font-size: 24px;
+  }
+  
+  .itemLocation {
+    font-size: 18px;
+  }
+  
+  .itemDate {
+    font-size: 18px;
+  }
+  
+  .price {
+    font-size: 24px;
+  }
+  
+  .description {
+    font-size: 18px;
+  }
+  
+  .titleAndFavorites {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .favoritesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .bookingInfo{
+    margin-left: 12rem;
+    margin-right: 12rem;
+    padding: 2rem 0.5rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pageContainer{
+    min-width: 415px;
+  }
+
+  .imgContainer{
+    height: 400px;
+  }
+  
+  .img{
+    width: 85%;
+    height: 85%;
+    border-radius: 18px;
+  }
+
+  .favoritesContainer {
+    margin-top: 18px;
+    font-size: 12px;
+  }
+
+  .bookingInfo{
+    margin: 0rem 1rem;
+  }
+
+  .productInfo{
+    padding: 0.4rem;
+    gap: 0.3rem;
+  }
+  
+  .itemName {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .itemLocation {
+    font-size: 13px;
+  }
+  
+  .itemDate {
+    font-size: 13px;
+  }
+
+  .ratingContainer{
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    gap: 10px;
+    font-size: 13px;
+  }
+  
+  .price {
+    font-size: 18px;
+  }
+
+  .bookingLabels {
+    font-size: 14px;
+  }
+
+  .quantityInput {
+    font-size: 14px;
+    width: 40px;
+    padding: 0.8rem;
+  }
+
+  .btnMain {
+    font-size: 14px;
+    padding-left: 90px;
+    padding-right: px;
+  }
+
+  .segmentContainer {
+    margin-top: 2rem;
+  }
+  
+  .segmentButton {
+    flex: 1;
+    padding: 1rem;
+    font-size: 14px;
+  }
+  
+  .segmentButton.active {
+    font-size: 14px;
+  }
+
+  .tabContent {
+    margin-top: 3rem;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .description {
+    font-size: 14px;
+  }
+
+  .reviewHeader {
+    font-size: 14px;
+  }
+
+  .userName {
+    font-size: 14px;
+  }
+
+  .commentText {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .pageContainer{
+    min-width: 376px;
+  }
+
+  .imgContainer{
+    height: 400px;
+  }
+  
+  .img{
+    width: 78%;
+    height: 78%;
+    border-radius: 18px;
+  }
+
+  .favoritesContainer {
+    margin-top: 18px;
+    font-size: 12px;
+  }
+
+  .bookingInfo{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .productInfo{
+    padding: 0.4rem;
+    gap: 0.3rem;
+  }
+  
+  .itemName {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .itemLocation {
+    font-size: 13px;
+  }
+  
+  .itemDate {
+    font-size: 13px;
+  }
+
+  .ratingContainer{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 10px;
+    font-size: 13px;
+  }
+  
+  .price {
+    font-size: 18px;
+  }
+
+  .bookingLabels {
+    font-size: 14px;
+  }
+
+  .quantityInput {
+    font-size: 14px;
+    width: 40px;
+    padding: 0.8rem;
+  }
+
+  .btnMain {
+    font-size: 12px;
+    padding-left: 85px;
+    padding-right: 85px;
+  }
+
+  .segmentContainer {
+    margin-top: 2rem;
+  }
+  
+  .segmentButton {
+    flex: 1;
+    padding: 1rem;
+    font-size: 14px;
+  }
+  
+  .segmentButton.active {
+    font-size: 14px;
+  }
+  
+  .description {
+    font-size: 14px;
+  }
+
+  .reviewHeader {
+    font-size: 14px;
+  }
+
+  .userName {
+    font-size: 14px;
+  }
+
+  .commentText {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .pageContainer{
+    min-width: 361px;
+  }
+
+  .imgContainer{
+    height: 390px;
+  }
+  
+  .img{
+    width: 75%;
+    height: 75%;
+    border-radius: 18px;
+  }
+
+  .favoritesContainer {
+    margin-top: 18px;
+    font-size: 12px;
+  }
+
+  .bookingInfo{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .productInfo{
+    padding: 0.6rem;
+    gap: 0.5rem;
+  }
+  
+  .itemName {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .itemLocation {
+    font-size: 13px;
+  }
+  
+  .itemDate {
+    font-size: 13px;
+  }
+
+  .ratingContainer{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 10px;
+    font-size: 13px;
+  }
+  
+  .price {
+    font-size: 18px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+
+  .bookingLabels {
+    font-size: 14px;
+  }
+
+  .quantityInput {
+    font-size: 14px;
+    width: 40px;
+    padding: 0.8rem;
+  }
+
+  .btnMain {
+    font-size: 12px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .segmentContainer {
+    margin-top: 2rem;
+  }
+  
+  .segmentButton {
+    flex: 1;
+    padding: 1rem;
+    font-size: 14px;
+  }
+  
+  .segmentButton.active {
+    font-size: 14px;
+  }
+  
+  .description {
+    font-size: 13px;
+  }
+
+  .reviewHeader {
+    font-size: 13px;
+  }
+
+  .userName {
+    font-size: 13px;
+  }
+
+  .commentText {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .pageContainer{
+    min-width: 320px;
+  }
+
+  .imgContainer{
+    margin: 0;
+    height: 300px;
+  }
+  
+  .img{
+    width: 55%;
+    height: 55%;
+    border-radius: 12px;
+  }
+
+  .productInfo{
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .itemName {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .itemLocation {
+    font-size: 12px;
+  }
+  
+  .itemDate {
+    font-size: 12px;
+  }
+
+  .ratingContainer{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 10px;
+    font-size: 12px;
+  }
+  
+  .price {
+    font-size: 16px;
+  }
+
+  .favoritesContainer {
+    margin-top: 12px;
+    font-size: 10px;
+  }
+
+  .bookingInfo{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .bookingLabels {
+    font-size: 12px;
+  }
+
+  .quantityInput {
+    font-size: 12px;
+    width: 35px;
+    padding: 0.5rem;
+  }
+
+  .btnMain {
+    font-size: 12px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .segmentContainer {
+    margin-top: 2rem;
+  }
+  
+  .segmentButton {
+    flex: 1;
+    padding: 1rem;
+    font-size: 13px;
+  }
+  
+  .segmentButton.active {
+    font-size: 13px;
+  }
+  
+  .description {
+    font-size: 12px;
+  }
+
+  .fullWidthImg {
+    margin-top: 2rem;
+  }
+
+  .reviewHeader {
+    font-size: 12px;
+  }
+
+  .userName {
+    font-size: 12px;
+  }
+
+  .commentText {
+    font-size: 12px;
   }
 }

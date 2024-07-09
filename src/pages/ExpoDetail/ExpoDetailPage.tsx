@@ -206,13 +206,11 @@ export default function ExpoDetailPage(props: CartProps): React.ReactElement {
             </figure>
             <div className={styles.productInfo}>
               <h2 className={styles.itemName}>{itemInfo.name}</h2>
-              <br></br>
               <p className={styles.itemLocation}>Location: {itemInfo.location}</p>
               <p className={styles.itemDate}>Duration: {itemInfo.start_date} ~ {itemInfo.end_date}</p>
               <div className={styles.ratingContainer}>
                 <AverageStarRating exhibitionId={parseInt(exhibition_id!)} />
               </div>
-              <br></br>
               <p className={styles.price}>
                 {itemInfo.price === 0 ? "Free" : `Price: ${formatter.format(itemInfo.price)}`}
               </p>
@@ -245,7 +243,7 @@ export default function ExpoDetailPage(props: CartProps): React.ReactElement {
               </div>
               {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
               <div className={styles.ButtonContainer}>
-                <button className="btn-main" onClick={() => handleCartItems(itemInfo)}>
+                <button className= {styles.btnMain} onClick={() => handleCartItems(itemInfo)}>
                   Book Now
                 </button>
               </div>
@@ -273,7 +271,7 @@ export default function ExpoDetailPage(props: CartProps): React.ReactElement {
               </div>
             ) : (
               <div>
-                <button className="btn-main" onClick={() => navigate(`/writeReview/${exhibition_id}`)}>
+                <button className={styles.btnMain} onClick={() => navigate(`/writeReview/${exhibition_id}`)}>
                   Write a review
                 </button>
                 {renderReviews()}

@@ -23,17 +23,6 @@
   gap: 2rem;
 }
 
-.itemTitle {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  text-align: center;
-  line-height: 115%;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-}
-
 .itemWrapper {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -61,7 +50,7 @@
 }
 
 .itemImg {
-  width: 100%;
+  width: auto;
   height: 100%;
   object-fit: cover;
   transition: width 0.25s, height 0.25s;
@@ -124,13 +113,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .filtersContainer {
     display: flex;
     flex-wrap: wrap;
-    padding: none;
     margin: none;
-    gap: 1rem;
+    padding: 1.3rem 0.6rem;
+    gap: 1.3rem;
   }
 
   .itemsContainer {
@@ -138,6 +127,159 @@
   }
 
   .imgBox {
-    height: 300px;
+    height: 260px;
+  }
+
+  .des {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .itemName {
+    font-size: 16px;
+  }
+
+  .itemLocation {
+    font-size: 13px;
+  }
+
+  .itemDate {
+    font-size: 12px;
+  }
+  
+  .ctaButton {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    font-size: 12px;
+  }
+  .ctaButton::after {
+    padding-left: 12px;
+    content: '>';
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .filtersContainer {
+    padding: 1.2rem 0.5rem;
+    gap: 1.2rem;
+  }
+
+  .imgBox {
+    height: 230px;
+  }
+
+  .des {
+    margin-top: 10px;
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .itemName {
+    font-size: 15px;
+  }
+
+  .itemLocation {
+    font-size: 12px;
+  }
+
+  .itemDate {
+    font-size: 11px;
+  }
+  
+  .ctaButton {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    font-size: 11px;
+  }
+  .ctaButton::after {
+    padding-left: 11px;
+    content: '>';
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .filtersContainer {
+    padding: 1.1rem 0.4rem;
+    gap: 1.1rem;
+  }
+
+  .imgBox {
+    height: 230px;
+  }
+
+  .des {
+    margin-top: 10px;
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .itemName {
+    font-size: 14px;
+  }
+
+  .itemLocation {
+    font-size: 11px;
+  }
+
+  .itemDate {
+    font-size: 10px;
+  }
+  
+  .ctaButton {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    font-size: 10px;
+  }
+  .ctaButton::after {
+    padding-left: 10px;
+    content: '>';
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .filtersContainer {
+    padding: 1rem 0.3rem;
+    gap: 1rem;
+  }
+  
+  .imgBox {
+    height: 190px;
+  }
+
+  .des {
+    margin-top: 10px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .itemName {
+    font-size: 12px;
+  }
+
+  .itemLocation {
+    font-size: 10px;
+  }
+
+  .itemDate {
+    font-size: 8px;
+  }
+  
+  .ctaButton {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    font-size: 9px;
+  }
+  .ctaButton::after {
+    padding-left: 9px;
+    content: '>';
+    font-size: 9px;
   }
 }

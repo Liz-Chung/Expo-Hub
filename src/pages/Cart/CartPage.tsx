@@ -60,19 +60,19 @@ export default function CartPage(props: CartProps): React.ReactElement {
                         </Link>
                         <div className={styles.cardBox}>
                           <h2>
-                            <Link to={`/expo/${expo.exhibition_id}`} className="title-bold-28">
+                            <Link to={`/expo/${expo.exhibition_id}`} className={styles.expoName}>
                               {expo.name}
                             </Link>
                           </h2>
-                          <p className="text-regular-18">
-                            <span className='title-bold-18'>Price: </span> {formatter.format(expo.price * expo.quantity)}
+                          <p className={styles.price}>
+                            <strong>Price: </strong> {formatter.format(expo.price * expo.quantity)}
                           </p>
-                          <p className="text-regular-18">
+                          <p className={styles.visitDate}>
                             <strong>Visit Date:</strong> {expo.selectedVisitDate ? new Date(expo.selectedVisitDate).toLocaleDateString() : 'Not selected'}
                           </p>
                           <div className={styles.btnGroup}>
                             <button
-                              className="btn-main2"
+                              className={styles.btnMain2}
                               onClick={() => handleCount(expo, 'minus')}
                               style={{
                                 borderTopRightRadius: '0',
@@ -81,11 +81,11 @@ export default function CartPage(props: CartProps): React.ReactElement {
                             >
                               -
                             </button>
-                            <button className='btn-ghost'>
+                            <button className={styles.btnGhost}>
                               {expo.quantity}
                             </button>
                             <button
-                              className="btn-main2"
+                              className={styles.btnMain2}
                               onClick={() => handleCount(expo, 'plus')}
                               style={{
                                 borderTopLeftRadius: '0',
@@ -101,8 +101,8 @@ export default function CartPage(props: CartProps): React.ReactElement {
                   );
                 })}
                 <div className={styles.priceBox}>
-                  <span className="text-medium-24">Total : {formatter.format(totalPrice)}</span>
-                  <button className="btn-main">
+                  <span>Total : {formatter.format(totalPrice)}</span>
+                  <button className={styles.btnMain}>
                     Pay Now
                   </button>
                 </div>
