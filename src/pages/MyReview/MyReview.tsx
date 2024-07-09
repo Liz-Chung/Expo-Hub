@@ -76,7 +76,7 @@ const MyReviewPage = () => {
         const data = doc.data() as Review;
         console.log('Review data from Firebase:', data);
 
-        const exhibitionResponse = await fetch(`/api/exhibitions/${data.exhibition_id}`, {
+        const exhibitionResponse = await fetch(`/api/reviews/${data.exhibition_id}`, {
           headers: {
             'Cache-Control': 'no-cache'
           }
