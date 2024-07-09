@@ -73,7 +73,7 @@ const MyReviewPage = () => {
       const reviewsData = await Promise.all(querySnapshot.docs.map(async (doc) => {
         const data = doc.data() as Review;
         
-        const exhibitionResponse = await fetch(`/api/exhibitions/${data.exhibition_id}`);
+        const exhibitionResponse = await fetch(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/exhibitions/${data.exhibition_id}`);
         const exhibitionData = await exhibitionResponse.json();
         
         return {
