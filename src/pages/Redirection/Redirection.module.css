@@ -1,9 +1,7 @@
 .pageContainer{
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - 227px);
-  margin-top: 62px;
-  padding: 1rem;
+  height: 100vh;
 }
 
 .textBox{
