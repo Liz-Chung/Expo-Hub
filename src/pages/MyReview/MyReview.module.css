@@ -79,6 +79,10 @@
     padding: 5rem 1rem;
   }
 
+  .reviewlistContainer {
+    flex-direction: row;
+  }
+
   .productBox {
     flex-direction: column;
     align-items: flex-start;
@@ -107,6 +111,10 @@
     padding: 5rem 0.5rem;
   }
 
+  .reviewlistContainer {
+    flex-direction: row;
+  }
+
   .productBox {
     gap: 0.5rem;
   }
@@ -133,6 +141,10 @@
     padding: 4rem 0.5rem;
   }
 
+  .reviewlistContainer {
+    flex-direction: row;
+  }
+
   .productBox {
     gap: 0.5rem;
   }
@@ -157,6 +169,10 @@
 @media screen and (max-width: 360px) {
   .pageContainer {
     padding: 3rem 0.5rem;
+  }
+
+  .reviewlistContainer {
+    flex-direction: row;
   }
 
   .productBox {
