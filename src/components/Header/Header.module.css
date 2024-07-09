@@ -114,7 +114,7 @@
   transform: translateX(-50%);
   background-color: var(--color-white);
   color: var(--color-black);
-  padding: 20px 100px;
+  padding: 10px 100px;
   border-radius: 10px;
   z-index: 1001;
   text-align: center;
