@@ -75,7 +75,7 @@ export default function SideNav(): React.ReactElement {
           {auth ? (
             <div className={styles.loginButtonContainer} onClick={openModal}>
               <div className={styles.loginButton}>
-                <span>
+                <span className={`material-symbols-outlined ${styles.loginIcon}`}>
                   logout
                 </span>
                 <span className="text-bold-16">Logout</span>
