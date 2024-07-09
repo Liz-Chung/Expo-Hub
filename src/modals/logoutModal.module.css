@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 768px) {
   .modal {
-    width: 340px;
+    width: 360px;
   }
 
   .modal {
@@ -71,7 +71,7 @@
 
 @media screen and (max-width: 375px) {
   .modal {
-    width: 300px;
+    width: 320px;
   }
 
   .modal {
@@ -86,7 +86,7 @@
 
 @media screen and (max-width: 360px) {  
   .modal {
-    width: 280px;
+    width: 300px;
   }
 
   .modal {
