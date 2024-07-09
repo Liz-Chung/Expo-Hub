@@ -42,7 +42,7 @@
 }
 
 .exhibitionInfo {
-  width: auto;
+  width: 35%;
 }
 
 .exhibitionImage {
@@ -79,22 +79,23 @@
     padding: 5rem 1rem;
   }
 
-  .productContainer {
-    flex-direction: row;
+  .productBox {
+    gap: 1rem;
   }
 
-  .productBox {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  .reviewContainer {
+    width: 100%;
+    height: auto;
+  }
+
+  .exhibitionInfo {
+    width: 100%;
+    text-align: center;
   }
 
   .exhibitionImage {
     width: 100px;
-  }
-
-  .reviewContainer {
-    height: auto;
+    margin: 0 auto;
   }
 
   .exhibitionName {
@@ -111,20 +112,23 @@
     padding: 5rem 0.5rem;
   }
 
-  .productContainer {
-    flex-direction: row;
-  }
-
   .productBox {
     gap: 0.5rem;
   }
 
-  .exhibitionImage {
-    width: 80px;
+  .reviewContainer {
+    width: 100%;
+    height: auto;
   }
 
-  .reviewContainer {
-    padding: 0.5rem;
+  .exhibitionInfo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .exhibitionImage {
+    width: 80px;
+    margin: 0 auto;
   }
 
   .exhibitionName {
@@ -141,20 +145,23 @@
     padding: 4rem 0.5rem;
   }
 
-  .productContainer {
-    flex-direction: row;
-  }
-
   .productBox {
     gap: 0.5rem;
   }
 
-  .exhibitionImage {
-    width: 70px;
+  .reviewContainer {
+    width: 100%;
+    height: auto;
   }
 
-  .reviewContainer {
-    padding: 0.5rem;
+  .exhibitionInfo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .exhibitionImage {
+    width: 70px;
+    margin: 0 auto;
   }
 
   .exhibitionName {
@@ -171,20 +178,23 @@
     padding: 3rem 0.5rem;
   }
 
-  .productContainer {
-    flex-direction: row;
-  }
-
   .productBox {
     gap: 0.5rem;
   }
 
-  .exhibitionImage {
-    width: 60px;
+  .reviewContainer {
+    width: 100%;
+    height: auto;
   }
 
-  .reviewContainer {
-    padding: 0.5rem;
+  .exhibitionInfo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .exhibitionImage {
+    width: 60px;
+    margin: 0 auto;
   }
 
   .exhibitionName {
