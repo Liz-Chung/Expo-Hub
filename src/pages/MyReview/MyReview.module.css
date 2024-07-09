@@ -79,7 +79,7 @@
     padding: 5rem 1rem;
   }
 
-  .reviewlistContainer {
+  .productContainer {
     flex-direction: row;
   }
 
@@ -111,7 +111,7 @@
     padding: 5rem 0.5rem;
   }
 
-  .reviewlistContainer {
+  .productContainer {
     flex-direction: row;
   }
 
@@ -141,7 +141,7 @@
     padding: 4rem 0.5rem;
   }
 
-  .reviewlistContainer {
+  .productContainer {
     flex-direction: row;
   }
 
@@ -171,7 +171,7 @@
     padding: 3rem 0.5rem;
   }
 
-  .reviewlistContainer {
+  .productContainer {
     flex-direction: row;
   }
 
