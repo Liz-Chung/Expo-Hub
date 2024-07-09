@@ -73,3 +73,109 @@
   font-size: 0.875rem;
   margin-top: 0.5rem;
 }
+
+@media screen and (max-width: 768px) {
+  .pageContainer {
+    padding: 5rem 1rem;
+  }
+
+  .productBox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .exhibitionImage {
+    width: 100px;
+  }
+
+  .reviewContainer {
+    height: auto;
+  }
+
+  .exhibitionName {
+    font-size: 1.1rem;
+  }
+
+  .reviewComment {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .pageContainer {
+    padding: 5rem 0.5rem;
+  }
+
+  .productBox {
+    gap: 0.5rem;
+  }
+
+  .exhibitionImage {
+    width: 80px;
+  }
+
+  .reviewContainer {
+    padding: 0.5rem;
+  }
+
+  .exhibitionName {
+    font-size: 1rem;
+  }
+
+  .reviewComment {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .pageContainer {
+    padding: 4rem 0.5rem;
+  }
+
+  .productBox {
+    gap: 0.5rem;
+  }
+
+  .exhibitionImage {
+    width: 70px;
+  }
+
+  .reviewContainer {
+    padding: 0.5rem;
+  }
+
+  .exhibitionName {
+    font-size: 0.9rem;
+  }
+
+  .reviewComment {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .pageContainer {
+    padding: 3rem 0.5rem;
+  }
+
+  .productBox {
+    gap: 0.5rem;
+  }
+
+  .exhibitionImage {
+    width: 60px;
+  }
+
+  .reviewContainer {
+    padding: 0.5rem;
+  }
+
+  .exhibitionName {
+    font-size: 0.8rem;
+  }
+
+  .reviewComment {
+    font-size: 0.8rem;
+  }
+}
