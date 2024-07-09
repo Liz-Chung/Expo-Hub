@@ -109,7 +109,7 @@
 
 @media screen and (max-width: 415px) {
   .pageContainer {
-    padding: 5rem 0.5rem;
+    padding: 10rem 0.5rem;
   }
 
   .productBox {
@@ -142,7 +142,7 @@
 
 @media screen and (max-width: 375px) {
   .pageContainer {
-    padding: 4rem 0.5rem;
+    padding: 10rem 0.5rem;
   }
 
   .productBox {
@@ -175,7 +175,7 @@
 
 @media screen and (max-width: 360px) {
   .pageContainer {
-    padding: 3rem 0.5rem;
+    padding: 10rem 0.5rem;
   }
 
   .productBox {
