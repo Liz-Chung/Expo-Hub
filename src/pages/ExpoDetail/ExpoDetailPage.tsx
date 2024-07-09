@@ -35,6 +35,7 @@ export default function ExpoDetailPage(props: CartProps): React.ReactElement {
   const [loading, setLoading] = useState<boolean>(true);
 
   const users = useRecoilValue(userList);
+  const fetchedReviews = useRecoilValue(reviewList);
   const [reviews, setReviews] = useState<NormalizedReviews[]>([]);
   const navigate = useNavigate();
 
@@ -77,18 +78,10 @@ export default function ExpoDetailPage(props: CartProps): React.ReactElement {
 
   useEffect(() => {
     if (activeTab === 'reviews') {
-      const fetchReviews = async () => {
-        try {
-          const response = await axios.get(`${import.meta.env.VITE_MOCKUP_EXPO_API}/api/reviews`);
-          setReviews(response.data.filter((review: NormalizedReviews) => review.exhibition_id === parseInt(exhibition_id!)));
-        } catch (error) {
-          console.error('Error fetching reviews:', error);
-        }
-      };
-      fetchReviews();
+      setReviews(fetchedReviews.filter((review: NormalizedReviews) => review.exhibition_id === parseInt(exhibition_id!)));
     }
-  }, [activeTab, exhibition_id]);
-
+  }, [activeTab, exhibition_id, fetchedReviews]);
+  
   useEffect(() => {
     if (state?.newReview) {
       setReviews((prevReviews) => [...prevReviews, state.newReview!]);
