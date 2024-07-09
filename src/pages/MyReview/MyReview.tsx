@@ -67,15 +67,26 @@ const MyReviewPage = () => {
   }, [isLoggedIn]);
 
   const fetchReviews = async (userId: string, isMounted: boolean) => {
+    console.log(`Fetching reviews for user ID: ${userId}`);
     try {
       const q = query(collection(db, "reviews"), where("user_id", "==", userId));
       const querySnapshot = await getDocs(q);
+      console.log('Query Snapshot:', querySnapshot);
       const reviewsData = await Promise.all(querySnapshot.docs.map(async (doc) => {
         const data = doc.data() as Review;
-        
-        const exhibitionResponse = await fetch(`/api/exhibitions/${data.exhibition_id}`);
+        console.log('Review data from Firebase:', data);
+
+        const exhibitionResponse = await fetch(`/api/exhibitions/${data.exhibition_id}`, {
+          headers: {
+            'Cache-Control': 'no-cache'
+          }
+        });
+        if (!exhibitionResponse.ok) {
+          throw new Error('Failed to fetch exhibition data');
+        }
         const exhibitionData = await exhibitionResponse.json();
-        
+        console.log('Exhibition data from API:', exhibitionData);
+
         return {
           ...data,
           review_id: doc.id,
@@ -85,8 +96,10 @@ const MyReviewPage = () => {
       }));
       if (isMounted) {
         setReviews(reviewsData);
+        console.log('Reviews data set:', reviewsData);
       }
     } catch (error) {
+      console.error('Error fetching reviews:', error);
       if (isMounted) {
         setErrorMessage('Error fetching your reviews. Please try again.');
       }
