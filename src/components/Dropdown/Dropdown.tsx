@@ -11,21 +11,21 @@ interface CustomDropdownProps {
   selectedValue: number | null;
   onSelect: (value: number | null) => void;
   placeholder: string;
+  isOpen: boolean;
+  onToggle: () => void;
 }
 
-const CustomDropdown: React.FC<CustomDropdownProps> = ({ options, selectedValue, onSelect, placeholder }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const CustomDropdown: React.FC<CustomDropdownProps> = ({ options, selectedValue, onSelect, placeholder, isOpen, onToggle }) => {
   const handleSelect = (value: number | null) => {
     onSelect(value);
-    setIsOpen(false);
+    onToggle();
   };
 
   return (
     <div className={styles.dropdown}>
       <div 
         className={`${styles.dropdownToggle} ${selectedValue ? styles.selected : ''}`} 
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onToggle}
       >
         {selectedValue ? options.find(option => option.id === selectedValue)?.name : placeholder}
         <span className={styles.arrow}></span>

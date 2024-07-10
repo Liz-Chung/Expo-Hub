@@ -17,6 +17,8 @@ export default function Expo(): React.ReactElement {
   const [selectedLocationType, setSelectedLocationType] = useState<number | null>(null);
   const [selectedPrice, setSelectedPrice] = useState<number | null>(null);
 
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
   const categories = useRecoilValue(categoriesState);
   const themes = useRecoilValue(themesState);
   const audienceTypes = useRecoilValue(audienceTypesState);
@@ -54,6 +56,10 @@ export default function Expo(): React.ReactElement {
     });
   };
 
+  const handleToggleDropdown = (dropdownName: string) => {
+    setOpenDropdown(prev => (prev === dropdownName ? null : dropdownName));
+  };
+
   return (
     <>
       <div className={styles.pageContainer}>
@@ -63,30 +69,40 @@ export default function Expo(): React.ReactElement {
             selectedValue={selectedCategory}
             onSelect={setSelectedCategory}
             placeholder="Categories"
+            isOpen={openDropdown === 'category'}
+            onToggle={() => handleToggleDropdown('category')}
           />
           <Dropdown
             options={themes.map((theme: Theme) => ({ id: theme.theme_id, name: theme.name }))}
             selectedValue={selectedTheme}
             onSelect={setSelectedTheme}
             placeholder="Themes"
+            isOpen={openDropdown === 'theme'}
+            onToggle={() => handleToggleDropdown('theme')}
           />
           <Dropdown
             options={audienceTypes.map((audienceType: AudienceType) => ({ id: audienceType.audience_type_id, name: audienceType.name }))}
             selectedValue={selectedAudienceType}
             onSelect={setSelectedAudienceType}
             placeholder="Audience"
+            isOpen={openDropdown === 'audienceType'}
+            onToggle={() => handleToggleDropdown('audienceType')}
           />
           <Dropdown
             options={locationTypes.map((locationType: LocationType) => ({ id: locationType.location_type_id, name: locationType.name }))}
             selectedValue={selectedLocationType}
             onSelect={setSelectedLocationType}
             placeholder="Location"
+            isOpen={openDropdown === 'locationType'}
+            onToggle={() => handleToggleDropdown('locationType')}
           />
           <Dropdown
             options={priceOptions}
             selectedValue={selectedPrice}
             onSelect={setSelectedPrice}
             placeholder="Price"
+            isOpen={openDropdown === 'price'}
+            onToggle={() => handleToggleDropdown('price')}
           />
         </div>
         <div className={styles.itemsContainer}>
